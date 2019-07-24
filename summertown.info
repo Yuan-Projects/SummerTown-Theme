@@ -5,4 +5,5 @@ version = VERSION
 core = 7.x
 stylesheets[all][] = style.css
 stylesheets[print][] = print.css
+scripts[] = google-analytics.js
 settings[summertown_width] = fluid
