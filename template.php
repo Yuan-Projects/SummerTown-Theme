@@ -3,7 +3,7 @@
 /**
  * Override of theme_breadcrumb().
  */
-function garland_breadcrumb($variables) {
+function summertown_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   if (!empty($breadcrumb)) {
@@ -19,21 +19,21 @@ function garland_breadcrumb($variables) {
 /**
  * Override or insert variables into the maintenance page template.
  */
-function garland_preprocess_maintenance_page(&$variables) {
+function summertown_preprocess_maintenance_page(&$variables) {
   // While markup for normal pages is split into page.tpl.php and html.tpl.php,
   // the markup for the maintenance page is all in the single
   // maintenance-page.tpl.php template. So, to have what's done in
-  // garland_preprocess_html() also happen on the maintenance page, it has to be
+  // summertown_preprocess_html() also happen on the maintenance page, it has to be
   // called here.
-  garland_preprocess_html($variables);
+  summertown_preprocess_html($variables);
 }
 
 /**
  * Override or insert variables into the html template.
  */
-function garland_preprocess_html(&$variables) {
+function summertown_preprocess_html(&$variables) {
   // Toggle fixed or fluid width.
-  if (theme_get_setting('garland_width') == 'fluid') {
+  if (theme_get_setting('summertown_width') == 'fluid') {
     $variables['classes_array'][] = 'fluid-width';
   }
   // Add conditional CSS for IE6.
@@ -43,7 +43,7 @@ function garland_preprocess_html(&$variables) {
 /**
  * Override or insert variables into the html template.
  */
-function garland_process_html(&$variables) {
+function summertown_process_html(&$variables) {
   // Hook into color.module
   if (module_exists('color')) {
     _color_html_alter($variables);
@@ -53,7 +53,7 @@ function garland_process_html(&$variables) {
 /**
  * Override or insert variables into the page template.
  */
-function garland_preprocess_page(&$variables) {
+function summertown_preprocess_page(&$variables) {
   // Move secondary tabs into a separate variable.
   $variables['tabs2'] = array(
     '#theme' => 'menu_local_tasks',
@@ -117,21 +117,21 @@ function garland_preprocess_page(&$variables) {
 /**
  * Override or insert variables into the node template.
  */
-function garland_preprocess_node(&$variables) {
+function summertown_preprocess_node(&$variables) {
   $variables['submitted'] = $variables['date'] . ' — ' . $variables['name'];
 }
 
 /**
  * Override or insert variables into the comment template.
  */
-function garland_preprocess_comment(&$variables) {
+function summertown_preprocess_comment(&$variables) {
   $variables['submitted'] = $variables['created'] . ' — ' . $variables['author'];
 }
 
 /**
  * Override or insert variables into the block template.
  */
-function garland_preprocess_block(&$variables) {
+function summertown_preprocess_block(&$variables) {
   $variables['title_attributes_array']['class'][] = 'title';
   $variables['classes_array'][] = 'clearfix';
 }
@@ -139,7 +139,7 @@ function garland_preprocess_block(&$variables) {
 /**
  * Override or insert variables into the page template.
  */
-function garland_process_page(&$variables) {
+function summertown_process_page(&$variables) {
   // Hook into color.module
   if (module_exists('color')) {
     _color_page_alter($variables);
@@ -149,7 +149,7 @@ function garland_process_page(&$variables) {
 /**
  * Override or insert variables into the region template.
  */
-function garland_preprocess_region(&$variables) {
+function summertown_preprocess_region(&$variables) {
   if ($variables['region'] == 'header') {
     $variables['classes_array'][] = 'clearfix';
   }
