@@ -36,8 +36,6 @@ function summertown_preprocess_html(&$variables) {
   if (theme_get_setting('summertown_width') == 'fluid') {
     $variables['classes_array'][] = 'fluid-width';
   }
-  // Add conditional CSS for IE6.
-  drupal_add_css(path_to_theme() . '/fix-ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
 }
 
 /**
