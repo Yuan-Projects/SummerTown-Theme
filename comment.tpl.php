@@ -19,7 +19,7 @@
     <div class="content"<?php print $content_attributes; ?>>
       <?php hide($content['links']); print render($content); ?>
       <?php if ($signature): ?>
-      <div class="clearfix">
+      <div>
         <div>—</div>
         <?php print $signature ?>
       </div>

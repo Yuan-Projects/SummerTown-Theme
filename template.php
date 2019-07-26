@@ -133,7 +133,6 @@ function summertown_preprocess_comment(&$variables) {
  */
 function summertown_preprocess_block(&$variables) {
   $variables['title_attributes_array']['class'][] = 'title';
-  $variables['classes_array'][] = 'clearfix';
 }
 
 /**
@@ -150,7 +149,4 @@ function summertown_process_page(&$variables) {
  * Override or insert variables into the region template.
  */
 function summertown_preprocess_region(&$variables) {
-  if ($variables['region'] == 'header') {
-    $variables['classes_array'][] = 'clearfix';
-  }
 }
