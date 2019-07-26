@@ -23,10 +23,10 @@
   <body class="<?php print $classes ?>">
 
 <!-- Layout -->
-  <div id="header-region" class="clearfix"><?php print $header; ?></div>
+  <div id="header-region"><?php print $header; ?></div>
 
     <div id="wrapper">
-    <div id="container" class="clearfix">
+    <div id="container">
 
       <div id="header">
         <div id="logo-floater">
@@ -67,7 +67,7 @@
           <?php if ($title): ?><h2><?php print $title ?></h2><?php endif; ?>
           <?php print $messages; ?>
           <?php print $help; ?>
-          <div class="clearfix">
+          <div>
             <?php print $content ?>
           </div>
           <div id="footer"><?php print $footer ?></div>
