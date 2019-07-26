@@ -2,7 +2,7 @@
 ?>
 <div class="<?php print $classes . ' ' . $zebra; ?>"<?php print $attributes; ?>>
 
-  <div class="clearfix">
+  <div>
 
     <span class="submitted"><?php print $submitted ?></span>
 

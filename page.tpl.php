@@ -3,7 +3,7 @@
   <?php print render($page['header']); ?>
 
   <div id="wrapper">
-    <div id="container" class="clearfix">
+    <div id="container">
 
       <div id="header">
         <div id="logo-floater">
@@ -40,7 +40,7 @@
           <?php print $breadcrumb; ?>
           <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
           <a id="main-content"></a>
-          <?php if ($tabs): ?><div id="tabs-wrapper" class="clearfix"><?php endif; ?>
+          <?php if ($tabs): ?><div id="tabs-wrapper"><?php endif; ?>
           <?php print render($title_prefix); ?>
           <?php if ($title): ?>
             <h1<?php print $tabs ? ' class="with-tabs"' : '' ?>><?php print $title ?></h1>
@@ -51,7 +51,7 @@
           <?php print $messages; ?>
           <?php print render($page['help']); ?>
           <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-          <div class="clearfix">
+          <div>
             <?php print render($page['content']); ?>
           </div>
           <?php print $feed_icons ?>

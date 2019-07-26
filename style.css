@@ -418,6 +418,7 @@ body.two-sidebars #wrapper #container {
 body.fluid-width #wrapper #container {
   width: auto;
   max-width: 1270px;
+  overflow: auto;
 }
 
 #wrapper #container #header {
@@ -726,6 +727,7 @@ ul.secondary li {
   padding: 0 26px;
   border-bottom: 1px solid #e9eff3;
   position: relative;
+  overflow: auto;
 }
 ul.primary {
   padding: 0.5em 0 10px;
