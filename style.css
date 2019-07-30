@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background: #edf5fa;
-  font: 76%/170% Verdana, sans-serif;
+  font: 100%/170% Verdana, sans-serif;
   color: #494949;
 }
 
@@ -422,17 +422,44 @@ body.fluid-width #wrapper #container {
 }
 
 #wrapper #container #header {
-  height: 80px;
+  height: 6rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
 }
 
-#wrapper #container #header #logo-floater {
-  position: absolute;
+#header #logo-floater {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#header .main-menu {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+}
+
+#header .secondary-menu {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 0;
+  justify-self: end;
+  align-self: start;
+}
+#header .secondary-menu a {
+  padding: 0;
 }
 
 #branding,
 #branding a:link,
 #branding a:visited {
-  line-height: 120px;
+  line-height: 6rem;
   position: relative;
   z-index: 2;
   white-space: nowrap;
@@ -531,6 +558,7 @@ body.two-sidebars #squeeze {
 #wrapper #container #center #squeeze {
   background: #fff url(images/bg-content.png) repeat-x 50% 0;
   position: relative;
+  top: -1em;
 }
 
 #wrapper #container #center .right-corner {
