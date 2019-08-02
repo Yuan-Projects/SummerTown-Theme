@@ -1283,3 +1283,19 @@ table.system-status-report tr.ok th {
   background-color: #dfd;
   border-color: #beb;
 }
+
+/**
+ * Google code prettifier
+ */
+li.L0, li.L1, li.L2, li.L3, li.L4,
+li.L5, li.L6, li.L7, li.L8, li.L9 {
+  list-style-type: decimal-leading-zero !important;
+}
+
+ol.linenums {
+  padding-left: 2rem;
+}
+
+pre.prettyprint {
+  overflow-x: auto;
+}
