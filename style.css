@@ -1298,4 +1298,5 @@ ol.linenums {
 
 pre.prettyprint {
   overflow-x: auto;
+  padding-left: 5px;
 }
